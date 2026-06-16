@@ -1,6 +1,6 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f7f6;
+  font-family: "Segoe UI";
+  background-color: var(--base-color);
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,18 +9,29 @@ body {
   height: 100vh;
 }
 
+#darktheme {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .todo-container {
-  background-color: #ffffff;
+  position: relative;
+  background-color: var(--base-variant);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
 }
 
 h2 {
   margin-top: 0;
-  color: #333;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -59,14 +70,34 @@ ul {
 }
 
 li {
-  justify-content: space-between; 
-  background-color: #f9f9f9;
+  justify-content: space-between;
+  background-color: var(--base-variant);
+  color: var(--text-color);
   padding: 12px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--base-color);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   border-radius: 5px;
   margin-bottom: 8px;
+  gap: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #d68910;
 }
 
 .delete-btn {
@@ -82,3 +113,46 @@ li {
   background-color: #6d0c02;
 }
 
+:root {
+  --base-color: rgb(226, 226, 226);
+  --base-variant: #fffcfc;
+  --text-color: #000;
+  --secondary-text: #001;
+  --primary-color: #111;
+  --accent-color: #012;
+}
+
+.darkmode {
+  --base-color: rgb(37, 37, 37);
+  --base-variant: #333333;
+  --text-color: #fff;
+  --secondary-text: #001;
+  --primary-color: #7b7777;
+  --accent-color: #012;
+}
+
+.wrapper {
+  width: 100%;
+  margin-left: 60%;
+}
+
+#search-con {
+  margin-top: 1em 0;
+}
+
+#search-con input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  right: 20px;
+}
+
+
+#search-con button {
+  padding: 1em 2em;
+  margin-left: 0em;
+  background-color: #666764;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 0.5em;
+}
