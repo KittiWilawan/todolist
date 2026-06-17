@@ -140,7 +140,6 @@ function filterTodos() {
     item.style.display = text.includes(searchInput) ? "flex" : "none";
   });
 }
-
 document.getElementById("search").addEventListener("click", filterTodos);
 document.getElementById("search-input").addEventListener("input", filterTodos);
 
@@ -160,4 +159,4 @@ todoInput.addEventListener("keypress", function (event) {
   }
 });
 
-renderTodos();
+renderTodos(); 
